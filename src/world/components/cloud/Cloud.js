@@ -5,7 +5,9 @@ class Cloud extends Group {
     constructor() {
         super();
         this.meshes = createMeshes();
-        this.add(this.meshes);
+        for (let i = 0, l = this.meshes.length; i < l; i++) {
+            this.add(this.meshes[i]);
+        }
     }
 }
 

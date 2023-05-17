@@ -1,9 +1,9 @@
 import { BoxGeometry } from "three";
 
 function createGeometries() {
-    const geom = new BoxGeometry(20, 20, 20);
+    const box = new BoxGeometry(20, 20, 20);
     
-    return { geom };
+    return { box };
 }
 
 export { createGeometries }

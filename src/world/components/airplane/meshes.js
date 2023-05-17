@@ -1,11 +1,10 @@
-import { Mesh, Object3D } from "three";
+import { Mesh } from "three";
 import { createGeometries } from "./geometries";
 import { createMaterials } from "./materials";
 
 function createMeshes() {
     const geometries = createGeometries();
     const materials = createMaterials();
-    // const airPlane = new Object3D();
 
     const cockpit = new Mesh(geometries.cockpit, materials.cockpit);
     cockpit.castShadow = true;

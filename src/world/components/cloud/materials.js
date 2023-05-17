@@ -2,11 +2,11 @@ import { MeshPhongMaterial } from "three";
 import { colors } from '../../data/color';
 
 function createMaterials() {
-    const mat = new MeshPhongMaterial({
+    const box = new MeshPhongMaterial({
         color: colors.white,
     });
 
-    return { mat };
+    return { box };
 }
 
 export { createMaterials };
