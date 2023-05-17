@@ -6,10 +6,12 @@ class Sea extends Group {
         super();
         this.meshes = createMeshes();
         this.add(this.meshes.sea);
+
+        this.position.y = -600;
     }
 
-    tick(delta) {
-        this.meshes.sea.rotation.z += .005;
+    tick() {
+        this.rotation.z += .005;
     }
 }
 

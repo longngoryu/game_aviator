@@ -6,12 +6,9 @@ function createMeshes() {
     const geometries = createGeometries();
     const materials = createMaterials();
 
-    const sea = new Mesh(geometries.geom, materials.mat);
-    sea.position.y = -600;
+    const sea = new Mesh(geometries.sea, materials.sea);
 
     return { sea };
-    
-
 }
 
 export { createMeshes };
