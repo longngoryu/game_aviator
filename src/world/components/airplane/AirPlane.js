@@ -26,7 +26,6 @@ class AirPlane extends Group {
         this.position.x = targetX;
         this.position.y = targetY;
     }
-
 }
 
 export { AirPlane };
