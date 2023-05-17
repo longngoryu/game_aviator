@@ -1,5 +1,5 @@
 import { MeshPhongMaterial } from "three";
-import { colors } from '../../../../assets/color';
+import { colors } from '../../data/color';
 
 function createMaterials() {
     const cockpit = new MeshPhongMaterial({
