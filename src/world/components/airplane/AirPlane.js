@@ -21,6 +21,7 @@ class AirPlane extends Group {
 
     tick() {
         this.meshes.propeller.rotation.x += 0.3;
+
         let targetX = normalize(mousePos.x, -1, 1, -100, 100);
         let targetY = normalize(mousePos.y, -1, 1, 25, 175);
         this.position.x = targetX;

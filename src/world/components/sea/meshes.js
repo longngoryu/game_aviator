@@ -7,7 +7,7 @@ function createMeshes() {
     const materials = createMaterials();
 
     const sea = new Mesh(geometries.sea, materials.sea);
-
+    sea.receiveShadow = true;
     return { sea };
 }
 

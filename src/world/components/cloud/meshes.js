@@ -21,10 +21,11 @@ function createMeshes() {
         s.rotation.y = Math.random() * Math.PI * 2;
 
         const sizeRandom = .1 + Math.random() * .9;
-        s.scale.set(sizeRandom, sizeRandom, sizeRandom);
 
+        s.scale.set(sizeRandom, sizeRandom, sizeRandom);
         s.castShadow = true;
         s.receiveShadow = true;
+        
         sea.push(s)
     }
 

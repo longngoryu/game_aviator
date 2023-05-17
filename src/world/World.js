@@ -29,16 +29,18 @@ class World {
     loop = new Loop(camera, scene, renderer);
     controls = createControls(camera, renderer.domElement);
     container.append(renderer.domElement);
-
     sea = new Sea();
     sky = new Sky();
     airPlane = new AirPlane();
 
+    controls.target.copy(airPlane.position);
+
     const { hemisphereLight, directionalLight } = createLights();
 
-    loop.updatables.push(controls, sea, sky, airPlane);
+    loop.updatables.push(sea, sky, airPlane);
 
-    scene.add(hemisphereLight, directionalLight, sea, sky, airPlane);
+    scene.add(sea, sky, airPlane);
+    scene.add( directionalLight, hemisphereLight);
 
     document.addEventListener('mousemove', handleMouseMove, false);
 
