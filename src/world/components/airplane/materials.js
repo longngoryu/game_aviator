@@ -22,7 +22,6 @@ function createMaterials() {
         flatShading: true
     });
 
-
     return { cockpit, engine, propeller, blade };
 }
 

@@ -9,7 +9,7 @@ function createMeshes() {
     const cockpit = new Mesh(geometries.cockpit, materials.cockpit);
     cockpit.castShadow = true;
     cockpit.receiveShadow = true;
-
+    
     const engine = new Mesh(geometries.engine, materials.engine);
     engine.castShadow = true;
     engine.receiveShadow = true;

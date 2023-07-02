@@ -1,4 +1,4 @@
-import { DirectionalLight, HemisphereLight} from 'three';
+import { DirectionalLight, HemisphereLight, AmbientLight} from 'three';
 
 function createLights() {
   const hemisphereLight = new HemisphereLight(
@@ -21,7 +21,9 @@ function createLights() {
   directionalLight.shadow.mapSize.width = 2048;
   directionalLight.shadow.mapSize.height = 2048;
 
-  return { hemisphereLight, directionalLight };
+  const ambientLight = new AmbientLight(0xdc8874, .5);
+
+  return { hemisphereLight, directionalLight, ambientLight };
 }
 
 export { createLights };

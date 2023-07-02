@@ -12,7 +12,7 @@ class AirPlane extends Group {
             this.meshes.engine,
             this.meshes.propeller,
             this.meshes.sideWing,
-            this.meshes.tailPlane
+            this.meshes.tailPlane,
         );
 
         this.position.y = 100;
@@ -24,8 +24,12 @@ class AirPlane extends Group {
 
         let targetX = normalize(mousePos.x, -1, 1, -100, 100);
         let targetY = normalize(mousePos.y, -1, 1, 25, 175);
-        this.position.x = targetX;
-        this.position.y = targetY;
+        
+        // this.position.x = targetX;
+        this.position.y +=  (targetY - this.position.y) * 0.1;
+
+        this.rotation.z = (targetY - this.position.y) * 0.0128;
+        this.rotation.x = (this.position.y - targetY) * 0.0064;
     }
 }
 

@@ -35,12 +35,12 @@ class World {
 
     controls.target.copy(airPlane.position);
 
-    const { hemisphereLight, directionalLight } = createLights();
+    const { hemisphereLight, directionalLight, ambientLight } = createLights();
 
     loop.updatables.push(sea, sky, airPlane);
 
     scene.add(sea, sky, airPlane);
-    scene.add( directionalLight, hemisphereLight);
+    scene.add( directionalLight, hemisphereLight, ambientLight);
 
     document.addEventListener('mousemove', handleMouseMove, false);
 
